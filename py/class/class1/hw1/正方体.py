@@ -1,0 +1,45 @@
+import turtle
+
+turtle.speed(10)
+
+a = turtle.pos()
+turtle.forward(40)
+b = turtle.pos()
+turtle.left(45)
+turtle.forward(20)
+c = turtle.pos()
+turtle.left(135)
+turtle.forward(40)
+d = turtle.pos()
+turtle.left(45)
+turtle.forward(20)
+
+turtle.right(135)
+turtle.forward(20)
+turtle.right(90)
+
+turtle.forward(40)
+turtle.left(45)
+turtle.forward(20)
+turtle.left(135)
+turtle.forward(40)
+turtle.left(45)
+turtle.forward(20)
+
+turtle.right(135)
+turtle.penup()
+turtle.goto(b)
+turtle.pendown()
+turtle.forward(20)
+turtle.penup()
+turtle.goto(c)
+turtle.pendown()
+turtle.forward(20)
+turtle.penup()
+turtle.goto(d)
+turtle.pendown()
+turtle.forward(20)
+
+turtle.hideturtle()
+
+turtle.done()
