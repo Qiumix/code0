@@ -1,4 +1,4 @@
-import java.util.Scanner;e
+import java.util.Scanner;
 
 public class array {
     public static final int[] addIndex(int[] array, int num, int index) {
