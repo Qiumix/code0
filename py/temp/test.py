@@ -11,8 +11,16 @@ def flop(flip):
 
 flip, flop = flop, flip
 
-print(flip(flop(1)(2))(3))
-flip(3)(3)
+print(flip(3)(3))
+
+def itself(x):
+    print(x)
+    return itself
+
+
+
+
+
 
 
 def summation(n, f):
