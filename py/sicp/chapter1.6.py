@@ -11,34 +11,24 @@ def flop(flip):
 
 flip, flop = flop, flip
 
-print(flip(3)(3))
+# print(flip(3)(3))
 
-def itself(x):
+def it(x):
     print(x)
-    return itself
-
-
-
-
-
-
-
+    return it
+##############################################
 def summation(n, f):
     total, i = 0, 1
     while i < n + 1:
         total, i = total + f(i), i + 1
     return total
-
-
 def pi_sum(x):
     return 8 / ((4 * x - 3) * (4 * x - 1))
+def itself(x):
+    return x
+pi = summation(1e6, pi_sum)
 
-
-pi = summation(1000000, pi_sum)
-print(pi)
-
-
-def improve(update, close, guess=1):
+def improve(update, close, guess = 1):
     while not close(guess):
         guess = update(guess)
     return guess
@@ -54,8 +44,3 @@ def approx_eq(x, y, tolerance=1e-20):
 
 def square_close_to_successor(guess):
     return approx_eq(guess * guess, guess + 1)
-
-
-c = improve(golden_update, square_close_to_successor)
-
-print(f"{c:.20f}")
