@@ -1,5 +1,6 @@
--- table_test2.lua 脚本文件
-local tbl = {"apple", "pear", "orange", "grape"}
-for key, val in pairs(tbl) do
-    print("Key", key)
+if 0
+then
+    print("林宇轩是0")
+else
+    print("淋雨轩是1")
 end
