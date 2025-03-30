@@ -54,16 +54,33 @@ def sum_digit(n):
     if n < 10:
         return n
     return n % 10 + n // 10
+
+
 def luhn(n):
-    a = []
-    i = 1
-    t = n
-    while t >= 10:
-        i, t = i + 1, t // 10
-    t = n
-    for j in range(1, i + 1):
-        a.append(t % 10)
-        t //= 10
+    bit, sum = 0, 0
+    while n > 0:
+        if bit % 2:
+            sum += sum_digit(n % 10) * 2
+        else:
+            sum += n % 10
+        n //= 10
+        bit += 1
+    return sum
+
+
+def luhn2(n):
     sum = 0
-    for j in range(i):
-        
+    sum += l_odd(n)
+    return sum
+
+
+def l_even(n):
+    if n == 0:
+        return 0
+    return l_odd(n // 10) + 2 * sum_digit(n % 10)
+
+
+def l_odd(n):
+    if n == 0:
+        return 0
+    return l_even(n // 10) + n % 10
