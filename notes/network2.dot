@@ -1,0 +1,30 @@
+digraph SocialNetwork {
+    // 设置节点样式
+    node [shape=circle, style=filled];
+    
+    // 定义女性节点（灰色）
+    "F1" [color=gray, label="F1"];
+    "F2" [color=gray, label="F2"];
+    "F3" [color=gray, label="F3"];
+    "F4" [color=gray, label="F4"];
+    "F5" [color=gray, label="F5"];
+    
+    // 定义男性节点（黑色）
+    "M1" [color=black, label="M1"];
+    "M2" [color=black, label="M2"];
+    "M3" [color=black, label="M3"];
+    "M4" [color=black, label="M4"];
+    "M5" [color=black, label="M5"];
+    
+    // 连接节点（标记正负性）
+    "F1" -> "M1" [label="+"];
+    "F1" -> "M2" [label="-"];
+    "F2" -> "M3" [label="+"];
+    "F3" -> "M4" [label="-"];
+    "F4" -> "M5" [label="+"];
+    "F5" -> "M1" [label="-"];
+    "F5" -> "M2" [label="+"];
+    "F5" -> "M3" [label="-"];
+    "F5" -> "M4" [label="+"];
+    "F5" -> "M5" [label="-"];
+}
